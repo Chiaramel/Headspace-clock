@@ -1,0 +1,64 @@
+void setup() {
+  background(255);
+  
+  
+  pixelDensity(displayDensity());
+  size(500, 500);
+  ellipseMode(RADIUS);
+  smooth(20);
+
+  // noFill();
+  // strokeWeight(5);
+  // stroke(255);
+  // ellipse(width / 2, height / 2, 249, 249);
+}
+
+
+void draw() {
+
+  // voglio un cerchio che si ingrandisce fino alle dodici
+
+  fill(255, 165, 0,9.9);
+  noStroke();
+
+  float h = map(hour(), 0, 24, 0, 249);
+
+  if (h == 0) {
+
+    h = 24;
+
+  }
+
+  ellipse(width / 2, height / 2, h, h);
+  noFill();
+  strokeWeight(.5);
+  stroke(248,247,244);
+  
+  
+  
+  ellipse(width / 2, height / 2, 249, 249);
+  noFill();
+  stroke(248,247,244);
+  strokeWeight(.7);
+
+  float s = map(second(), 0, 59, 0, 249);
+  ellipse(width / 2, height / 2, s, s);
+
+
+
+  float m = map(minute(), 0, 59, 0, 249);
+
+  noFill();
+  stroke(248,247,244);
+  strokeWeight(1.5);
+  ellipse(width / 2, height / 2, m, m);
+
+
+
+  if (h == 249 && m == 249 && s == 249) {
+    background(255);
+    stroke(248,247,244);
+    strokeWeight(.2);
+    ellipse(width / 2, height / 2, 249, 249);
+  }
+  
