@@ -16,7 +16,7 @@ void setup() {
 
 void draw() {
 
-  // voglio un cerchio che si ingrandisce fino alle dodici
+
 
   fill(255, 165, 0,9.9);
   noStroke();
